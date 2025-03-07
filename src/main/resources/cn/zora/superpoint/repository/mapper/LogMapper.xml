@@ -6,7 +6,7 @@
     <!--@Table log-->
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="user" jdbcType="VARCHAR" property="user" />
-    <result column="platform" jdbcType="OTHER" property="platform" />
+    <result column="platform" jdbcType="VARCHAR" property="platform"/>
     <result column="receive_message_json" jdbcType="VARCHAR" property="receiveMessageJson" />
     <result column="response_message_json" jdbcType="VARCHAR" property="responseMessageJson" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />

@@ -5,13 +5,13 @@ import cn.zora.superpoint.model.wechat.ReceiveMessage;
 import org.springframework.stereotype.Component;
 
 /**
- * DegradeCommandHandler
+ * RebootCommandHandler
  *
  * @author 阿左
- * @since 2024/03/02
+ * @since 2024/03/03
  */
 @Component
-public class DegradeCommandHandler extends AbstractCommandHandler{
+public class RebootCommandHandler extends AbstractCommandHandler{
     /**
      * 命令的使用说明
      *
@@ -21,11 +21,6 @@ public class DegradeCommandHandler extends AbstractCommandHandler{
     public String guidance() {
         return "占位符";
     }
-    
-    @Override
-    protected boolean needRegisterPlayer(){
-        return false;
-    }
 
     @Override
     protected boolean argsIsValid(String[] args) {
@@ -34,7 +29,7 @@ public class DegradeCommandHandler extends AbstractCommandHandler{
 
     @Override
     public String handleCommand(ReceiveMessage message) {
-       return "你好，我正在维护这套系统，预计在3月5日前将不能提供服务，很抱歉，敬请谅解🙏";
+       return "现在不支持系统重启啦，数据很安全哦！";
 
     }
 
@@ -45,6 +40,6 @@ public class DegradeCommandHandler extends AbstractCommandHandler{
      */
     @Override
     public CommandEnum respondCommand() {
-        return CommandEnum.COMMUNICATE;
+        return CommandEnum.REBOOT;
     }
 }

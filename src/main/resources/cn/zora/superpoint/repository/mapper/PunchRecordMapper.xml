@@ -11,7 +11,7 @@
     <result column="team_id" jdbcType="INTEGER" property="teamId" />
     <result column="facility_id" jdbcType="INTEGER" property="facilityId" />
     <result column="expect_serial" jdbcType="INTEGER" property="expectSerial" />
-    <result column="punched" jdbcType="OTHER" property="punched" />
+    <result column="punched" jdbcType="VARCHAR" property="punched"/>
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="punch_time" jdbcType="TIMESTAMP" property="punchTime" />
   </resultMap>

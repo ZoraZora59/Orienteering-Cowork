@@ -17,6 +17,7 @@ import javax.annotation.Resource;
  */
 @Service
 public class LogService {
+
     @Resource
     private LogMapper logMapper;
     public void recordLog(ReceiveMessage receive , ResponseMessage response){

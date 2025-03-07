@@ -6,7 +6,7 @@
     <!--@Table team-->
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="active" jdbcType="OTHER" property="active" />
+      <result column="active" jdbcType="VARCHAR" property="active"/>
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
   <sql id="Base_Column_List">

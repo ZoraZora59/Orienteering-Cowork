@@ -5,6 +5,9 @@ spring:
     url: jdbc:mysql://localhost:3204/superpoint?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: superpoint
     password: HbPaMri6j7eGDEbi
+    hikari:
+      connection-test-query: SELECT 1
+      minimum-idle: 1
 server:
   port: 7744
   shutdown: immediate

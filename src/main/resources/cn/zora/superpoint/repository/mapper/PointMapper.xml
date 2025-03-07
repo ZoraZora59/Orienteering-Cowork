@@ -8,7 +8,7 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="facility_id" jdbcType="INTEGER" property="facilityId" />
     <result column="match_id" jdbcType="INTEGER" property="matchId" />
-    <result column="point_type" jdbcType="OTHER" property="pointType" />
+    <result column="point_type" jdbcType="VARCHAR" property="pointType"/>
     <result column="lane" jdbcType="VARCHAR" property="lane" />
     <result column="geo_point" jdbcType="INTEGER" property="geoPoint" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />

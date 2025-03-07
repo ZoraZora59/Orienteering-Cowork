@@ -82,13 +82,14 @@ CREATE TABLE `player`
     `id`             int(11)      NOT NULL AUTO_INCREMENT,
     `nick_name`      varchar(32)  NOT NULL,
     `wechat_user`    varchar(255) NOT NULL            DEFAULT 'no_user',
-    `avatar`         varchar(255)                     DEFAULT 'https://cdn.zorazora.cn/superpoint_avatar_1.webp',
+    `avatar` varchar(255) DEFAULT '',
     `gender`         enum ('male','female','unknown') DEFAULT 'unknown',
     `phone_number`   varchar(255)                     DEFAULT NULL,
     `id_card_number` varchar(255)                     DEFAULT NULL,
     `create_time`    datetime                         DEFAULT CURRENT_TIMESTAMP,
     `update_time`    datetime                         DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `uniq_wechat` (`wechat_user`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
 

@@ -1,5 +1,6 @@
 package cn.zora.superpoint.common;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.Getter;
 
 /**
@@ -11,6 +12,7 @@ import lombok.Getter;
 @Getter
 public enum BooleanMysqlEnum {
     TRUE("true"),FALSE("false");
+    @EnumValue
     private final String value;
     BooleanMysqlEnum(String value){
         this.value=value;

@@ -1,5 +1,6 @@
 package cn.zora.superpoint.common;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.Getter;
 
 /**
@@ -10,11 +11,15 @@ import lombok.Getter;
  */
 @Getter
 public enum GenderTypeEnum {
-    MALE("男"),FEMALE("女"),UNKNOWN("未知");
+    MALE("male", "男"), FEMALE("female", "女"), UNKNOWN("unknown", "未知");
+    @EnumValue
     private final String value;
 
-    GenderTypeEnum(String value) {
+    private final String description;
+
+    GenderTypeEnum(String value, String description) {
         this.value = value;
+        this.description = description;
     }
 
 }

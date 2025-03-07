@@ -1,5 +1,6 @@
 package cn.zora.superpoint.common;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.Getter;
 
 /**
@@ -11,6 +12,7 @@ import lombok.Getter;
 @Getter
 public enum PointTypeEnum {
     NECESSARY("necessary"),UNNECESSARY("unnecessary");
+    @EnumValue
     private final String value;
     PointTypeEnum(String value){
         this.value=value;

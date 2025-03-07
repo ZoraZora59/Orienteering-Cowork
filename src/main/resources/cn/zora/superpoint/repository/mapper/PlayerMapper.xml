@@ -8,7 +8,7 @@
     <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
     <result column="wechat_user" jdbcType="VARCHAR" property="wechatUser" />
     <result column="avatar" jdbcType="VARCHAR" property="avatar" />
-    <result column="gender" jdbcType="OTHER" property="gender" />
+    <result column="gender" jdbcType="VARCHAR" property="gender"/>
     <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
     <result column="id_card_number" jdbcType="VARCHAR" property="idCardNumber" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -105,7 +105,7 @@
       #{nickName,jdbcType=VARCHAR},
       #{wechatUser,jdbcType=VARCHAR},
       #{avatar,jdbcType=VARCHAR},
-      #{gender,jdbcType=OTHER},
+      #{gender,jdbcType=VARCHAR},
       #{phoneNumber,jdbcType=VARCHAR},
       #{idCardNumber,jdbcType=VARCHAR},
       #{createTime,jdbcType=TIMESTAMP},
@@ -119,7 +119,7 @@
       nick_name = #{nickName,jdbcType=VARCHAR},
       wechat_user = #{wechatUser,jdbcType=VARCHAR},
       avatar = #{avatar,jdbcType=VARCHAR},
-      gender = #{gender,jdbcType=OTHER},
+      gender = #{gender,jdbcType=VARCHAR},
       phone_number = #{phoneNumber,jdbcType=VARCHAR},
       id_card_number = #{idCardNumber,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},

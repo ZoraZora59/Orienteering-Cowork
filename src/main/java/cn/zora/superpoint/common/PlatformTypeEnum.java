@@ -1,5 +1,6 @@
 package cn.zora.superpoint.common;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.Getter;
 
 /**
@@ -12,6 +13,7 @@ import lombok.Getter;
 public enum PlatformTypeEnum {
     WECHAT_MP("微信公众号-阿左小院");
 
+    @EnumValue
     private final String value;
     PlatformTypeEnum(String value){
         this.value=value;

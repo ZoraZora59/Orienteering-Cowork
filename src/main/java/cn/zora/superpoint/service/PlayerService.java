@@ -19,8 +19,16 @@ public class PlayerService {
     @Resource
     private PlayerMapper playerMapper;
 
-    public int registerPlayer(Player player) {
-        return playerMapper.insert(player);
+
+    public synchronized boolean registerPlayer(Player player) {
+        boolean isNewUser = true;
+        Player currentUser = playerMapper.selectOne(new LambdaQueryWrapper<Player>().eq(Player::getWechatUser, player.getWechatUser()));
+        if (currentUser != null) {
+            player.setId(currentUser.getId());
+            isNewUser = false;
+        }
+        int ignore = playerMapper.insertOrUpdate(player);
+        return isNewUser;
     }
 
     public Player getPlayerByID(String id) {
@@ -28,7 +36,7 @@ public class PlayerService {
     }
 
     public Player getPlayerByWechat(String wechatId) {
-        return playerMapper.selectById(new LambdaQueryWrapper<Player>().eq(Player::getWechatUser, wechatId));
+        return playerMapper.selectOne(new LambdaQueryWrapper<Player>().eq(Player::getWechatUser, wechatId));
     }
 
     public List<Player> getPlayersByNickName(String nickName) {
